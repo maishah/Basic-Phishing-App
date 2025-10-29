@@ -23,6 +23,16 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 
 # Load Random Forest model and TF-IDF vectorizer
+MODEL_PATH = 'phishing_rf_model.pkl'
+VECTORIZER_PATH = 'tfidf_vectorizer.pkl'
+
+if not os.path.exists(MODEL_PATH)
+    raise FileNotFoundError(
+        f"{MODEL_PATH} not found. "
+        "Please download it from:\n"
+        "https://drive.google.com/file/d/12xOYSfQfI9oo7Kjj3GMfrhJ57eIcohST/view?usp=sharing"
+)
+
 model = joblib.load('phishing_rf_model.pkl')
 tfidf = joblib.load('tfidf_vectorizer.pkl') 
 
